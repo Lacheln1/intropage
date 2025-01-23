@@ -1,8 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import profileImage from "../images/profile2.jpg";
-export default function ProfilePage() {
-  const Body = styled.body`
+import styled from "styled-components";
+import { Tooltip } from 'react-tooltip';
+export default function EtcPage(){
+    const Body = styled.body`
     width: 100%;
     height: 100%;
     display: flex;
@@ -13,7 +14,7 @@ export default function ProfilePage() {
   const InfoSection = styled.div`
     display:flex;
     border: 1px solid #fff;
-    width: 65%;
+    width: 60%;
     margin :10%;
   `;
 
@@ -46,7 +47,10 @@ export default function ProfilePage() {
     <Body>
       <InfoSection>
         <ImageSection>
-            <ProfileImage src={profileImage}/>
+            <div data-tooltip-id="tooltip1" data-tooltip-content={"이것은 툴팁"}>
+            <ProfileImage src={profileImage} />
+            </div>
+            <Tooltip id="tooltip1" place="right"/>
         </ImageSection>
 
         <ProfileInfoSection>
@@ -55,7 +59,7 @@ export default function ProfilePage() {
             <ProfileInfo>MBTI : ISTJ</ProfileInfo>
             <ProfileInfo>제일 좋았던 경험 : 학교 밴드부 입부 후 첫 공연을 끝냈을 때</ProfileInfo>
             <ProfileInfo>요즘 취미와 관심사 : 일렉기타, 게임</ProfileInfo>
-            <ProfileInfo>앞으로의 계획 : 유레카 수료, JLPT N1 or N2 도전 &#40;N3 보유중..&#41;</ProfileInfo>
+            <ProfileInfo>앞으로의 계획 : 일렉기타, 게임</ProfileInfo>
         </ProfileInfoSection>
       </InfoSection>
     </Body>
