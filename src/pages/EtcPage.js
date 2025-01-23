@@ -1,9 +1,10 @@
 import React from "react";
-import profileImage from "../images/profile2.jpg";
+import rd250Img from "../images/rd250.jpg";
+import pac612Img from "../images/pac612.jpg";
 import styled from "styled-components";
-import { Tooltip } from 'react-tooltip';
-export default function EtcPage(){
-    const Body = styled.body`
+import { Tooltip } from "react-tooltip";
+export default function EtcPage() {
+  const Body = styled.body`
     width: 100%;
     height: 100%;
     display: flex;
@@ -12,55 +13,118 @@ export default function EtcPage(){
   `;
 
   const InfoSection = styled.div`
-    display:flex;
+    display: flex;
     border: 1px solid #fff;
+    padding: 20px;
+    justify-content: space-between;
     width: 60%;
-    margin :10%;
+    margin: 10%;
   `;
 
   const ImageSection = styled.div`
-  display:inline-block;
-  border : 1px solid #fff;
-  `
+    border: 1px solid #fff;
+  `;
   const ProfileImage = styled.img`
-    width:300px;
-    height:100%;
-  `
+    width: 300px;
+  `;
   const ProfileInfoSection = styled.div`
-    width:auto;
-    
-    
-    
-  `
+    width: auto;
+  `;
 
-  const ProfileInfo=styled.div`
-    display:flex;
-    margin-top : 25px;
-    margin-left : 30px;
+  const ProfileInfo = styled.div`
+    display: flex;
+    text-align: center;
+    justify-content: center;
     color: white;
-    font-size : 25px;
-    
-    
-  `
+    font-size: 25px;
+  `;
+
+  const Trdesign = styled.tr`
+    color: white;
+    font-size: 25px;
+  `;
+
+  const TableDesign = styled.table`
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+  `;
 
   return (
     <Body>
       <InfoSection>
-        <ImageSection>
-            <div data-tooltip-id="tooltip1" data-tooltip-content={"이것은 툴팁"}>
-            <ProfileImage src={profileImage} />
-            </div>
-            <Tooltip id="tooltip1" place="right"/>
-        </ImageSection>
+        <TableDesign>
+          <Trdesign>사용중인 기타</Trdesign>
 
-        <ProfileInfoSection>
-            <ProfileInfo>홍성현</ProfileInfo>
-            <ProfileInfo>주전공: 가상현실전공 / 복수전공: 소프트웨어전공</ProfileInfo>
-            <ProfileInfo>MBTI : ISTJ</ProfileInfo>
-            <ProfileInfo>제일 좋았던 경험 : 학교 밴드부 입부 후 첫 공연을 끝냈을 때</ProfileInfo>
-            <ProfileInfo>요즘 취미와 관심사 : 일렉기타, 게임</ProfileInfo>
-            <ProfileInfo>앞으로의 계획 : 일렉기타, 게임</ProfileInfo>
-        </ProfileInfoSection>
+          <tr>
+            <td>
+              <ImageSection>
+                <div
+                  data-tooltip-id="pac612"
+                  data-tooltip-content={"YAMAHA Pacifica PAC612VIIFM"}
+                >
+                  <ProfileImage src={pac612Img} />
+                </div>
+                <Tooltip id="pac612" place="right" />
+                <ProfileInfo>메인 기타</ProfileInfo>
+              </ImageSection>
+            </td>
+
+            <td></td>
+            <td>
+              <ImageSection>
+                <div
+                  data-tooltip-id="rd250"
+                  data-tooltip-content={"Spear RD-250"}
+                >
+                  <ProfileImage src={rd250Img} />
+                </div>
+                <Tooltip id="rd250" place="right" />
+                <ProfileInfo>서브 기타</ProfileInfo>
+              </ImageSection>
+            </td>
+          </tr>
+          <Trdesign>여행 사진</Trdesign>
+          <tr>
+            <td>
+              <ImageSection>
+                <div
+                  data-tooltip-id="rd250"
+                  data-tooltip-content={"Spear RD-250"}
+                >
+                  <ProfileImage src={rd250Img} />
+                </div>
+                <Tooltip id="rd250" place="right" />
+                <ProfileInfo>서브 기타</ProfileInfo>
+              </ImageSection>
+            </td>
+
+            <td>
+              <ImageSection>
+                <div
+                  data-tooltip-id="rd250"
+                  data-tooltip-content={"Spear RD-250"}
+                >
+                  <ProfileImage src={rd250Img} />
+                </div>
+                <Tooltip id="rd250" place="right" />
+                <ProfileInfo>서브 기타</ProfileInfo>
+              </ImageSection>
+            </td>
+
+            <td>
+              <ImageSection>
+                <div
+                  data-tooltip-id="rd250"
+                  data-tooltip-content={"Spear RD-250"}
+                >
+                  <ProfileImage src={rd250Img} />
+                </div>
+                <Tooltip id="rd250" place="right" />
+                <ProfileInfo>서브 기타</ProfileInfo>
+              </ImageSection>
+            </td>
+          </tr>
+        </TableDesign>
       </InfoSection>
     </Body>
   );
