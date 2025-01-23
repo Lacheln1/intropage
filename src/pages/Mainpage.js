@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import ProfilePage from "./ProfilePage";
+import EtcPage from "./EtcPage";
 
 export default function Mainpage(){
-    const [activeTab,setActiveTab] = useState("MainPage");
+    const [activeTab,setActiveTab] = useState("ProfilePage");
 
 
 
@@ -11,9 +12,13 @@ export default function Mainpage(){
     
 
     return(
-        <div>
-            hello
-        </div>
+        <>
+            <div>
+                <button >프로필</button>
+                <button>etc..</button>
+            </div>
+            
+        </>
     )
 }
 
